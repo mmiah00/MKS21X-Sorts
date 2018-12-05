@@ -24,7 +24,7 @@ public class Sorts {
           smallest = ary [i];
         }
       }
-      ary [x] = smallest;
+      ary [x] = smallest; //puts the smallest value in
       x += 1;
       System.out.println (toString (ary));
     }
