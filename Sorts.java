@@ -1,5 +1,5 @@
 public class Sorts {
-  public static void selectionsort (int[] ary) {
+  public static void selectionSort (int[] ary) {
     while (!isSorted (ary)) {
       for (int x = 0; x + 1 < ary.length; x ++) {
         int one = ary[x];
@@ -54,11 +54,11 @@ public class Sorts {
 
     System.out.println ("SORTED");
 
-    selectionsort (t1);
-    selectionsort (t2);
-    selectionsort (t3);
-    selectionsort (t4);
-    selectionsort (t5);
+    selectionSort (t1);
+    selectionSort (t2);
+    selectionSort (t3);
+    selectionSort (t4);
+    selectionSort (t5);
 
     System.out.println (toString (t1));
     System.out.println (toString (t2));
