@@ -1,4 +1,6 @@
 public class Sorts {
+
+  /* WORKS BUT NOT RIGHT ALGORITHM
   public static void selectionSort (int[] ary) {
     while (!isSorted (ary)) {
       for (int x = 0; x + 1 < ary.length; x ++) {
@@ -9,6 +11,21 @@ public class Sorts {
           ary [x + 1] = one;
         }
       }
+    }
+  }
+  */
+
+  public static void selectionSort (int[] ary) {
+    int x = 0; //index we are adding min to
+    while (x < ary.length) {
+      int smallest = ary [x];
+      for (int i = x; i < ary.length; i ++ ) {
+        if (ary[i] < smallest) {
+          smallest = ary [i];
+        }
+      }
+      ary [x] = smallest;
+      x += 1;
     }
   }
 
@@ -47,10 +64,13 @@ public class Sorts {
     System.out.println (isSorted (t4));
     */
     System.out.println (toString (t1));
+
+
     System.out.println (toString (t2));
     System.out.println (toString (t3));
     System.out.println (toString (t4));
     System.out.println (toString (t5));
+
 
     System.out.println ("SORTED");
 
