@@ -26,6 +26,7 @@ public class Sorts {
       }
       ary [x] = smallest;
       x += 1;
+      System.out.println (toString (ary));
     }
   }
 
@@ -63,29 +64,30 @@ public class Sorts {
     System.out.println (isSorted (t3));
     System.out.println (isSorted (t4));
     */
+    /*
     System.out.println (toString (t1));
-
-
     System.out.println (toString (t2));
     System.out.println (toString (t3));
     System.out.println (toString (t4));
     System.out.println (toString (t5));
-
+    */
 
     System.out.println ("SORTED");
 
     selectionSort (t1);
+    /*
     selectionSort (t2);
     selectionSort (t3);
     selectionSort (t4);
     selectionSort (t5);
-
+    */
+    /*
     System.out.println (toString (t1));
     System.out.println (toString (t2));
     System.out.println (toString (t3));
     System.out.println (toString (t4));
     System.out.println (toString (t5));
-
+    */
   }
 
 }
