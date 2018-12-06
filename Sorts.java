@@ -16,17 +16,20 @@ public class Sorts {
   */
 
   public static void selectionSort (int[] ary) {
-    int x = 0; //index we are adding min to
+    int x = 0;
     while (x < ary.length) {
-      int smallest = ary [x];
-      for (int i = x; i < ary.length; i ++ ) {
-        if (ary[i] < smallest) {
-          smallest = ary [i];
+      int minvalue = ary [x];
+      int minvalueindex = x;
+      int old = ary[x];
+      for (int i = x; i < ary.length; i ++) {
+        if (ary[i] < minvalue) {
+          minvalueindex = i;
+          minvalue = ary [i];
         }
       }
-      ary [x] = smallest; //puts the smallest value in
-      x += 1;
-      System.out.println (toString (ary));
+      ary [x] = minvalue;
+      ary [minvalueindex] = old;
+      x ++ ;
     }
   }
 
@@ -64,30 +67,29 @@ public class Sorts {
     System.out.println (isSorted (t3));
     System.out.println (isSorted (t4));
     */
-    /*
+
     System.out.println (toString (t1));
     System.out.println (toString (t2));
     System.out.println (toString (t3));
     System.out.println (toString (t4));
     System.out.println (toString (t5));
-    */
+
 
     System.out.println ("SORTED");
 
     selectionSort (t1);
-    /*
     selectionSort (t2);
     selectionSort (t3);
     selectionSort (t4);
     selectionSort (t5);
-    */
-    /*
+
+
     System.out.println (toString (t1));
     System.out.println (toString (t2));
     System.out.println (toString (t3));
     System.out.println (toString (t4));
     System.out.println (toString (t5));
-    */
+    
   }
 
 }
