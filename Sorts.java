@@ -1,3 +1,4 @@
+import java.util.Random;
 public class Sorts {
 
   public static void selectionSort (int[] ary) {
@@ -27,6 +28,7 @@ public class Sorts {
           ary [x] = oneafter;
           ary [x + 1] = one;
         }
+        //System.out.println (toString (ary));
       }
     }
   }
@@ -54,39 +56,62 @@ public class Sorts {
   }
 
   public static void main (String[] args) {
-    int[] t1 = {2,3,4,7,5,3,5};
-    int[] t2 = {1,2,3,4,5};
-    int[] t3 = {6,2,45,865,4,8,-1};
-    int[] t4 = {1,1,1,1,1,2,4};
-    int[] t5 = {1,45,7,3,2,6,3,242,-23,304,20,20,-35,9,10,11,1,0,-5,14};
-    /*
-    System.out.println (isSorted (t1));
-    System.out.println (isSorted (t2));
-    System.out.println (isSorted (t3));
-    System.out.println (isSorted (t4));
-    */
+    if (args.length == 0){
+      int[] t1 = {2,3,4,7,5,3,5};
+      int[] t2 = {1,2,3,4,5};
+      int[] t3 = {6,2,45,865,4,8,-1};
+      int[] t4 = {1,1,1,1,1,2,4};
+      int[] t5 = {1,45,7,3,2,6,3,242,-23,304,20,20,-35,9,10,11,1,0,-5,14};
 
-    System.out.println (toString (t1));
-    System.out.println (toString (t2));
-    System.out.println (toString (t3));
-    System.out.println (toString (t4));
-    System.out.println (toString (t5));
+      /*
+      System.out.println (isSorted (t1));
+      System.out.println (isSorted (t2));
+      System.out.println (isSorted (t3));
+      System.out.println (isSorted (t4));
+      */
 
-
-    System.out.println ("SORTED");
-
-    selectionSort (t1);
-    selectionSort (t2);
-    selectionSort (t3);
-    selectionSort (t4);
-    selectionSort (t5);
+      System.out.println (toString (t1));
+      System.out.println (toString (t2));
+      System.out.println (toString (t3));
+      System.out.println (toString (t4));
+      System.out.println (toString (t5));
 
 
-    System.out.println (toString (t1));
-    System.out.println (toString (t2));
-    System.out.println (toString (t3));
-    System.out.println (toString (t4));
-    System.out.println (toString (t5));
+      System.out.println ("SORTED");
+      /*
+      selectionSort (t1);
+      selectionSort (t2);
+      selectionSort (t3);
+      selectionSort (t4);
+      selectionSort (t5);
+      */
+      bubbleSort (t1);
+      bubbleSort (t2);
+      bubbleSort (t3);
+      bubbleSort (t4);
+      bubbleSort (t5);
+
+      System.out.println (toString (t1));
+      System.out.println (toString (t2));
+      System.out.println (toString (t3));
+      System.out.println (toString (t4));
+      System.out.println (toString (t5));
+    }
+    else {
+      int len = Integer.parseInt (args[0]);
+      int[] nums = new int[len];
+      Random rand = new Random ();
+      int i = 0;
+      for (int x = 0; i < len; x ++) {
+        nums [i] = rand.nextInt() % 1000;
+        i ++;
+      }
+
+      System.out.println (toString (nums));
+      System.out.println ("SORTED");
+      bubbleSort (nums);
+      System.out.println (toString (nums));
+    }
 
   }
 
