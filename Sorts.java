@@ -1,20 +1,5 @@
 public class Sorts {
 
-  /* WORKS BUT NOT RIGHT ALGORITHM
-  public static void selectionSort (int[] ary) {
-    while (!isSorted (ary)) {
-      for (int x = 0; x + 1 < ary.length; x ++) {
-        int one = ary[x];
-        int oneafter = ary [x +1];
-        if (oneafter < one) {
-          ary [x] = oneafter;
-          ary [x + 1] = one;
-        }
-      }
-    }
-  }
-  */
-
   public static void selectionSort (int[] ary) {
     int x = 0;
     while (x < ary.length) {
@@ -30,6 +15,19 @@ public class Sorts {
       ary [x] = minvalue;
       ary [minvalueindex] = old;
       x ++ ;
+    }
+  }
+
+  public static void bubbleSort (int[] ary) {
+    while (!isSorted (ary)) {
+      for (int x = 0; x + 1 < ary.length; x ++) {
+        int one = ary[x];
+        int oneafter = ary [x +1];
+        if (oneafter < one) {
+          ary [x] = oneafter;
+          ary [x + 1] = one;
+        }
+      }
     }
   }
 
@@ -89,7 +87,7 @@ public class Sorts {
     System.out.println (toString (t3));
     System.out.println (toString (t4));
     System.out.println (toString (t5));
-    
+
   }
 
 }
