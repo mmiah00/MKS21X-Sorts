@@ -20,7 +20,7 @@ public class Sorts {
   }
 
   public static void bubbleSort (int[] ary) {
-    while (!isSorted (ary)) {
+    /*while (!isSorted (ary)) {
       for (int x = 0; x + 1 < ary.length; x ++) {
         int one = ary[x];
         int oneafter = ary [x +1];
@@ -31,6 +31,33 @@ public class Sorts {
         //System.out.println (toString (ary));
       }
     }
+    */
+    boolean swapped = true;
+    while (swapped) {
+      int numswaps = 0;
+      for (int x = 0; x + 1 < ary.length; x ++)  {
+        int one = ary [x];
+        int oneafter = ary [x + 1];
+        if (oneafter < one) {
+          ary [x] = oneafter;
+          ary [x + 1] = one;
+          numswaps ++;
+        }
+      }
+      if (numswaps == 0) {
+        swapped = false;
+      }
+    }
+  }
+
+  private static int minimum (int[] ary, int start, int end ) {
+    int ans = ary [start];
+    for (int x = start; x < end; x ++) {
+      if (ary [x] < ans){
+        ans = ary [x];
+      }
+    }
+    return ans;
   }
 
   private static boolean isSorted (int[] ary) {
