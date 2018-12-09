@@ -134,10 +134,10 @@ public class Sorts {
         i ++;
       }
 
-      System.out.println (toString (nums));
-      System.out.println ("SORTED");
+      //System.out.println (toString (nums));
+      //System.out.println ("SORTED");
       bubbleSort (nums);
-      System.out.println (toString (nums));
+      //System.out.println (toString (nums));
     }
 
   }
