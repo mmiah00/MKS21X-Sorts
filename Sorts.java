@@ -50,16 +50,6 @@ public class Sorts {
     }
   }
 
-  private static int minimum (int[] ary, int start, int end ) {
-    int ans = ary [start];
-    for (int x = start; x < end; x ++) {
-      if (ary [x] < ans){
-        ans = ary [x];
-      }
-    }
-    return ans;
-  }
-
   private static boolean isSorted (int[] ary) {
     for (int x = 0; x + 1< ary.length; x ++) {
       if (ary[x + 1] < ary [x] ) {
@@ -67,6 +57,19 @@ public class Sorts {
       }
     }
     return true;
+  }
+
+  public static void insertionSort (int[] ary) {
+    int sortedindex = 1;
+    while (sortedindex <= ary.length) {
+      int upto = ary [sortedindex];
+      for (int x = 0; x < sortedindex; x ++) {
+        if (upto < ary [x]) {
+          //put into sorted position
+        }
+      }
+      sortedindex ++;
+    }
   }
 
   public static String toString (int[] ary) {
