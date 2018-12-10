@@ -63,6 +63,7 @@ public class Sorts {
     int sortedindex = 1;
     while (sortedindex <= ary.length) {
       int upto = ary [sortedindex];
+      /*
       for (int x = 0; x < sortedindex; x ++) {
         if (upto < ary [x]) {
           //put into sorted position
@@ -70,7 +71,12 @@ public class Sorts {
       }
       sortedindex ++;
     }
-    //go backwards from thes elected index until you find something smaller 
+    */
+    for (int x = sortedindex; x > 0; x --) {
+
+      //go backwards from thes elected index until you find something smaller
+      }
+    }
   }
 
   public static String toString (int[] ary) {
