@@ -70,6 +70,7 @@ public class Sorts {
       }
       sortedindex ++;
     }
+    //go backwards from thes elected index until you find something smaller 
   }
 
   public static String toString (int[] ary) {
