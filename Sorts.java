@@ -60,18 +60,20 @@ public class Sorts {
   }
 
   public static void insertionSort (int[] ary) {
-    int sortedindex = 1; //divider between assorted and not
+    int sortedindex = 0; //divider between assorted and not
     while (sortedindex < ary.length) {
       int beingsorted = ary [sortedindex];
-      for (int x = sortedindex; x > 0; x --) { //going backwards to find the smallest
-        if (beingsorted < ary [x]) { //the first that is greater than ur number
-          int next = ary [x];
-          ary [x] = beingsorted;
-          ary [x + 1] = next;
+      for (int x = sortedindex; x >= 0; x --) { //going backwards to find the smallest
+        int now = ary [x];
+        if (now > beingsorted) {
+          ary [x + 1] = now;
+        }
+        if (now < beingsorted) {
+          ary [x] = beingsorted; //fix this now sure if its right
         }
       }
       sortedindex ++;
-      System.out.println (toString (ary));
+      //System.out.println (toString (ary));
     }
   }
 
@@ -102,17 +104,15 @@ public class Sorts {
       System.out.println (isSorted (t3));
       System.out.println (isSorted (t4));
       */
-      /*
+
       System.out.println (toString (t1));
       System.out.println (toString (t2));
       System.out.println (toString (t3));
       System.out.println (toString (t4));
       System.out.println (toString (t5));
-      */
 
-      System.out.println (toString (t1));
       System.out.println ("SORTED");
-      insertionSort (t1);
+
       /*
       selectionSort (t1);
       selectionSort (t2);
@@ -127,13 +127,19 @@ public class Sorts {
       bubbleSort (t4);
       bubbleSort (t5);
       */
-      /*
+
+      insertionSort (t1);
+      insertionSort (t2);
+      insertionSort (t3);
+      insertionSort (t4);
+
+
       System.out.println (toString (t1));
       System.out.println (toString (t2));
       System.out.println (toString (t3));
       System.out.println (toString (t4));
       System.out.println (toString (t5));
-      */
+
     }
     else {
       int len = Integer.parseInt (args[0]);
