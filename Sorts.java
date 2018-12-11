@@ -67,9 +67,7 @@ public class Sorts {
         int now = ary [x];
         if (now > beingsorted) {
           ary [x + 1] = now;
-        }
-        if (now < beingsorted) {
-          ary [x] = beingsorted; //fix this now sure if its right
+          ary [x] = beingsorted;
         }
       }
       sortedindex ++;
@@ -132,6 +130,7 @@ public class Sorts {
       insertionSort (t2);
       insertionSort (t3);
       insertionSort (t4);
+      insertionSort (t5);
 
 
       System.out.println (toString (t1));
