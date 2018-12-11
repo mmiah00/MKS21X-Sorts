@@ -60,22 +60,18 @@ public class Sorts {
   }
 
   public static void insertionSort (int[] ary) {
-    int sortedindex = 1;
-    while (sortedindex <= ary.length) {
-      int upto = ary [sortedindex];
-      /*
-      for (int x = 0; x < sortedindex; x ++) {
-        if (upto < ary [x]) {
-          //put into sorted position
+    int sortedindex = 1; //divider between assorted and not
+    while (sortedindex < ary.length) {
+      int beingsorted = ary [sortedindex];
+      for (int x = sortedindex; x > 0; x --) { //going backwards to find the smallest
+        if (beingsorted < ary [x]) { //the first that is greater than ur number
+          int next = ary [x];
+          ary [x] = beingsorted;
+          ary [x + 1] = next;
         }
       }
       sortedindex ++;
-    }
-    */
-    for (int x = sortedindex; x > 0; x --) {
-
-      //go backwards from thes elected index until you find something smaller
-      }
+      System.out.println (toString (ary));
     }
   }
 
@@ -106,15 +102,17 @@ public class Sorts {
       System.out.println (isSorted (t3));
       System.out.println (isSorted (t4));
       */
-
+      /*
       System.out.println (toString (t1));
       System.out.println (toString (t2));
       System.out.println (toString (t3));
       System.out.println (toString (t4));
       System.out.println (toString (t5));
+      */
 
-
+      System.out.println (toString (t1));
       System.out.println ("SORTED");
+      insertionSort (t1);
       /*
       selectionSort (t1);
       selectionSort (t2);
@@ -122,17 +120,20 @@ public class Sorts {
       selectionSort (t4);
       selectionSort (t5);
       */
+      /*
       bubbleSort (t1);
       bubbleSort (t2);
       bubbleSort (t3);
       bubbleSort (t4);
       bubbleSort (t5);
-
+      */
+      /*
       System.out.println (toString (t1));
       System.out.println (toString (t2));
       System.out.println (toString (t3));
       System.out.println (toString (t4));
       System.out.println (toString (t5));
+      */
     }
     else {
       int len = Integer.parseInt (args[0]);
